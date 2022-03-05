@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="451.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+   <center>
+      <Pane prefHeight="685.0" prefWidth="924.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="comboBox" layoutX="216.0" layoutY="213.0" onAction="#Select" prefHeight="51.0" prefWidth="202.0" promptText="Select an option" />
+            <Label fx:id="labelTitle" layoutX="244.0" layoutY="54.0" text="Welcome!" textFill="#21ae53">
+               <font>
+                  <Font name="System Bold Italic" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelText" layoutX="205.0" layoutY="153.0" text="What would you like to do?" textFill="#26973e">
+               <font>
+                  <Font name="System Italic" size="19.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Navigation">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showMenu" text="Menu" />
+                  <MenuItem mnemonicParsing="false" onAction="#showOperation" text="Operation Menu" />
+                  <MenuItem mnemonicParsing="false" onAction="#showHistory" text="Check history/balance" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

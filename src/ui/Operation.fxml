@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OperController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="amountArea" layoutX="226.0" layoutY="65.0" promptText="Insert the amount $" />
+            <RadioButton fx:id="incomeButton" layoutX="224.0" layoutY="143.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Income">
+               <toggleGroup>
+                  <ToggleGroup fx:id="operation" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="expenseButton" layoutX="321.0" layoutY="143.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="74.0" text="Expense" toggleGroup="$operation" />
+            <Label layoutX="233.0" layoutY="103.0" prefHeight="40.0" prefWidth="144.0" text="Transaction type" textFill="#246ca8">
+               <font>
+                  <Font name="Candara Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="descriptionArea" layoutX="176.0" layoutY="200.0" prefHeight="136.0" prefWidth="257.0" promptText="Write a breve description of the bank transaction">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="complete" layoutX="278.0" layoutY="350.0" mnemonicParsing="false" onAction="#completedOp" text="Complete" />
+            <Label layoutX="213.0" layoutY="14.0" prefHeight="40.0" prefWidth="175.0" text="BANK TRANSACTION" textFill="#246ca8">
+               <font>
+                  <Font name="Candara Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
